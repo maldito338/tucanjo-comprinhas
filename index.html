@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tucanjo • Compre aqui</title>
+    <meta name="description" content="Clique em “Compre aqui” para falar no WhatsApp com mensagem pronta." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <div class="brand" aria-label="Tucanjo">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__name">Tucanjo</span>
+          <span class="brand__sub">compras</span>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" aria-label="Banner principal">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow">Compra rápida</p>
+            <h1 class="hero__title">Compre pelo WhatsApp.</h1>
+            <p class="hero__subtitle">
+              Clique em <strong>Compre aqui</strong> e já vai abrir uma conversa com mensagem pronta,
+              incluindo a chave Pix <strong>12997959885</strong>.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" data-buy href="#" rel="noopener">Compre aqui</a>
+              <a class="btn btn--ghost" href="#como-funciona">Como funciona</a>
+            </div>
+            <ul class="hero__trust" aria-label="Destaques">
+              <li>1 clique</li>
+              <li>Mensagem pronta</li>
+              <li>WhatsApp Web ou app</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="section section--muted">
+        <div class="container steps">
+          <h2>Como funciona</h2>
+          <div class="steps__grid">
+            <div class="step">
+              <div class="step__icon" aria-hidden="true">1</div>
+              <h3>Clique</h3>
+              <p>Toque em <strong>Compre aqui</strong>.</p>
+            </div>
+            <div class="step">
+              <div class="step__icon" aria-hidden="true">2</div>
+              <h3>Mensagem pronta</h3>
+              <p>A conversa abre com a chave Pix <strong>12997959885</strong> já na mensagem.</p>
+            </div>
+            <div class="step">
+              <div class="step__icon" aria-hidden="true">3</div>
+              <h3>Enviar</h3>
+              <p>É só apertar <strong>Enviar</strong> e seguir as instruções no chat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>
+          <strong>Tucanjo</strong> •
+          <span class="muted">compra simples pelo WhatsApp</span>
+        </p>
+        <span class="muted">Chave Pix: 12997959885</span>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var phoneE164 = '5512996353761';
+        var pixKey = '12997959885';
+        var message = 'Olá! Quero comprar. Pode me enviar as instruções/valor para eu pagar?';
+        var url = 'https://wa.me/' + phoneE164 + '?text=' + encodeURIComponent(message);
+        var btn = document.querySelector('[data-buy]');
+        if (btn) btn.setAttribute('href', url);
+      })();
+    </script>
+  </body>
+</html>
